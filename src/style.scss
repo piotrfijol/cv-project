@@ -2,13 +2,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: serif;
+}
+
+h1, h2 {
+    color: rgb(98, 173, 98);
+}
+
+h1::after {
+    content: '';
+    width: 7em;
+    height: 3px;
+    background-color: rgb(200, 223, 97);
+    display: block;
+    margin-top: 0.1em;
 }
 
 #container {
-
-    border: 1px solid #000;
+    margin: 0 auto;
+    box-shadow: 1px 2px 2px 1px #CCC;
     width: 800px;
-    padding: 2em 2em 4em 2em;
+    padding: 1em 2em 4em 2em;
 }
 
 header {
@@ -25,6 +39,14 @@ header {
         width: 400px;
         margin-left: 2.7em;
     }
+
+    .label {
+        font-weight: 600;
+    }
+    
+    h1 {
+        margin: .7em 0;
+    }
 }
 
 .avatar {
@@ -37,6 +59,7 @@ header {
     width: 70%;
     margin-left: auto;
     border-left: 2px solid #AAA;
+    padding-bottom: 1em;
 
     & > * {
         margin-bottom: 3em;
@@ -70,8 +93,8 @@ header {
 
 .entry-header {
     display: flex;
-    transform: translateX(-11em);
     margin-bottom: .5em;
+    transform: translateX(-13.7em);
 }
 
 .general {
@@ -79,11 +102,11 @@ header {
     text-align: right;
 }
 
-.specific {
+.entry-header {
     position: relative;
 }
 
-.specific::before {
+.entry-header::before {
     content: '';
     width: 10px;
     height: 10px;
@@ -91,11 +114,15 @@ header {
     background-color: #000;
     border-radius: 50%;
     position: absolute;
-    left: -1.8em;
     top: 0.5em;
+    left: 10.5em;
 }
 
 .content ul {
     margin-left: 2em;
     color: #555;
+}
+
+.list-entry {
+    margin-bottom: 1em;
 }
