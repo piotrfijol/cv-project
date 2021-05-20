@@ -5,20 +5,28 @@
     font-family: serif;
 }
 
-h1, h2 {
-    color: rgb(98, 173, 98);
+@media only screen and (max-width:1400px) {
+    #root {
+        flex-direction: column;
+    }
 }
 
-h1::after {
-    content: '';
-    width: 7em;
-    height: 3px;
-    background-color: rgb(200, 223, 97);
-    display: block;
-    margin-top: 0.1em;
+body {
+    padding: 8rem 0;
+    background-color: #f9fcff;
 }
 
-#container {
+
+h2 {
+    color: rgb(113, 136, 60);
+}
+
+#root {
+    display: flex;
+}
+
+.container {
+    background-color: #FBFBFB;
     margin: 0 auto;
     box-shadow: 1px 2px 2px 1px #CCC;
     width: 800px;
@@ -38,15 +46,31 @@ header {
     .contact-info {
         width: 400px;
         margin-left: 2.7em;
+    
+    
+        h2 {
+            font-size: 32px;
+            color: rgb(98, 167, 98);
+            width: 7em;
+        }
     }
+
 
     .label {
         font-weight: 600;
     }
     
-    h1 {
+    h2 {
         margin: .7em 0;
     }
+}
+
+h2.underline::after {
+    content: '';
+    height: 3px;
+    background-color: rgb(200, 223, 97);
+    display: block;
+    margin-top: 0.1em;
 }
 
 .avatar {
@@ -125,4 +149,39 @@ header {
 
 .list-entry {
     margin-bottom: 1em;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    padding: 0 6em 0 1em;
+    height: 5em;
+    width: 100vw;
+    background-color: #19815f;
+    
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 1em;
+        color: white;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1em 2em;
+    background-color: #56ad4e;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #5fb857;
+    transition-duration: .2s;
 }
