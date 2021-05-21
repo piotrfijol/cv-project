@@ -12,7 +12,7 @@ function Preview(props) {
     return (
         <div className="container">
                 <header>
-                    <Avatar editable={props.editable}/>
+                    <Avatar onAvatarChange={props.onAvatarChange} url={props.data.details.avatar} editable={props.editable}/>
                     <Details onDetailsChange={props.onDetailsChange} details={props.data.details} editable={props.editable}/>
                 </header>
             <div className="sections">

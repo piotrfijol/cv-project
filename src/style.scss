@@ -75,6 +75,7 @@ h2.underline::after {
 
 .avatar {
     display: block;
+    height: 130px;
     width: 130px;
     border-radius: 50%;
 }
@@ -234,4 +235,34 @@ textarea {
     height: 150px;
     resize: none;
     padding: .5em;
+}
+
+input[type="file"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.avatar-target {
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: '+';
+        color: #FFF;
+        box-sizing: content-box;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0em .3em;
+        transform: scale(0.6);
+        display: block;
+        position: absolute;
+        background-color: black;
+        border-radius: 50%;
+        right: 0;
+        bottom: 0;
+    }
+
 }

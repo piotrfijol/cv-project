@@ -15,7 +15,8 @@ class App extends Component {
         phoneNum: '000000000',
         email: 'mymail@mymail.com',
         website: 'www.peternowakexample.com',
-        description: 'More about me'
+        description: 'More about me',
+        avatar: ''
       }, 
       experience: [
         {
@@ -38,6 +39,16 @@ class App extends Component {
       ]
     }
   }
+
+  handleAvatarChange(e) {
+    this.setState(state => ({
+      details: {
+        ...state.details,
+        avatar: e.target.value
+      }
+    }));
+  }
+
   handleDetailsChange(e) {
     this.setState(state => ({
       details: {
@@ -98,6 +109,7 @@ class App extends Component {
         {this.state.editable ? 
         <Preview 
           onProfileChange={this.handleDetailsChange}
+          onAvatarChange={this.handleDetailsChange}
           onDetailsChange={this.handleDetailsChange}
           onExperienceChange={this.handleExperienceChange} 
           data={this.state}
