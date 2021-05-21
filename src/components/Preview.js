@@ -16,7 +16,7 @@ function Preview(props) {
                     <Details onDetailsChange={props.onDetailsChange} details={props.data.details} editable={props.editable}/>
                 </header>
             <div className="sections">
-                <Profile editable={props.editable}/>
+                <Profile onProfileChange={props.onProfileChange} description={props.data.details.description} editable={props.editable}/>
                 <Experience onExperienceChange={props.onExperienceChange} experience={props.data.experience} editable={props.editable}/>
                 <Education editable={props.editable}/>
                 <Achievements editable={props.editable}/>

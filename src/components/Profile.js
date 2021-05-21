@@ -1,9 +1,9 @@
 import Section from './Section';
 
-function Profile() {
+function Profile({editable, description, onProfileChange}) {
     return (
     <Section name="Profile" icon="fas fa-user">
-        <textarea />
+        {editable ? <textarea onChange={onProfileChange} id="description"/> : <p>{description}</p>}
     </Section>
     );
 }

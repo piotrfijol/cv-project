@@ -95,12 +95,14 @@ class App extends Component {
           data={this.state}
           editable={false}
         />
+        {this.state.editable ? 
         <Preview 
+          onProfileChange={this.handleDetailsChange}
           onDetailsChange={this.handleDetailsChange}
           onExperienceChange={this.handleExperienceChange} 
           data={this.state}
           editable={this.state.editable}
-        />
+        /> : '' }
   
       </React.Fragment>
     );
