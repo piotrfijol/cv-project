@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: 'Times New Roman';
 }
 
 @media only screen and (max-width:1400px) {
@@ -44,7 +44,6 @@ header {
     }
 
     .contact-info {
-        width: 400px;
         margin-left: 2.7em;
     
     
@@ -58,6 +57,7 @@ header {
 
     .label {
         font-weight: 600;
+        margin-right: .3em;
     }
     
     h2 {
@@ -118,6 +118,7 @@ h2.underline::after {
 .entry-header {
     display: flex;
     margin-bottom: .5em;
+    font-size: 16px;
     transform: translateX(-13.7em);
 }
 
@@ -126,11 +127,16 @@ h2.underline::after {
     text-align: right;
 }
 
+.time-interval {
+    width: 8em;
+}
+
 .entry-header {
     position: relative;
 }
 
 .entry-header::before {
+    font-size: 16px;
     content: '';
     width: 10px;
     height: 10px;
@@ -184,4 +190,38 @@ h2.underline::after {
 .btn:hover {
     background-color: #5fb857;
     transition-duration: .2s;
+}
+
+form {
+
+    label {
+        font-weight: 600;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3em;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    width: 60%;
+    padding: .2em;
+}
+
+.right {
+    display: block;
+    margin-left: auto !important;
+}
+
+h3 {
+    max-width: 50ch;
+    word-wrap: break-word;
 }
