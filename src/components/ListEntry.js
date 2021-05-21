@@ -4,8 +4,10 @@ function ListEntry(props) {
     const entryHeader = props.data && (
         <div className="entry-header">
             <div className="general">
-                <p className="time-interval">
-                    {`${props.data.from} - ${props.data.to}`}</p>
+                <div className="time-interval">
+                    <div>{`${props.data.from} -`}</div>
+                    <div>{props.data.to}</div>
+                </div>
                 <p className="location">{props.data.location}</p>
             </div>
             <div className="specific">
