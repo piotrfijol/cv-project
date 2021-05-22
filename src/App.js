@@ -13,6 +13,9 @@ class App extends Component {
     this.handleItemAdd = this.handleItemAdd.bind(this);
     this.handleItemRemove = this.handleItemRemove.bind(this);
     this.handleItemChange = this.handleItemChange.bind(this);
+    this.handleListAdd = this.handleListAdd.bind(this);
+    this.handleListRemove = this.handleListRemove.bind(this);
+    this.handleListChange = this.handleListChange.bind(this);
     this.switchMode = this.switchMode.bind(this);
     this.state = {
       details: {
@@ -118,6 +121,39 @@ class App extends Component {
 
   }
 
+  handleListChange(e, id, sectionName) {
+    this.setState(state => {
+      return {
+        [sectionName]: [
+          ...state[sectionName].slice(0, id),
+          e.target.value,
+          ...state[sectionName].slice(id+1)
+        ]
+      }
+    })
+  }
+
+  handleListAdd(e, sectionName) {
+    this.setState(state => {
+      return {
+        [sectionName]: [
+          ...state[sectionName],
+          ''
+        ]
+      }
+    });
+  } 
+  
+  handleListRemove(e, sectionName) {
+    this.setState(state => {
+      return {
+        [sectionName]: [
+          ...state[sectionName].slice(0, state[sectionName].length-1)
+        ]
+      }
+    });
+  }
+
   handleItemChange(e, entryId, taskId, sectionName) {
     
 
@@ -207,6 +243,9 @@ class App extends Component {
         onItemAdd={this.handleItemAdd}
         onItemRemove={this.handleItemRemove}
         onItemChange={this.handleItemChange}
+        onListAdd={this.handleListAdd}
+        onListRemove={this.handleListRemove}
+        onListChange={this.handleListChange}
         data={this.state}
         editable={this.state.editable}
       /> 

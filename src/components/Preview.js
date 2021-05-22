@@ -49,8 +49,20 @@ function Preview(props) {
                     education={props.data.education} 
                     editable={props.editable}
                 />
-                <Achievements editable={props.editable}/>
-                <Interests editable={props.editable}/>
+                <Achievements 
+                    editable={props.editable}
+                    onListAdd={props.onListAdd}
+                    onListRemove={props.onListRemove}
+                    onListChange={props.onListChange}
+                    achievements={props.data.achievements}
+                />
+                <Interests 
+                    editable={props.editable}
+                    onListAdd={props.onListAdd}
+                    onListRemove={props.onListRemove}
+                    onListChange={props.onListChange}
+                    interests={props.data.interests}
+                />
             </div>
         </div>
     );
