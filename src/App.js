@@ -35,7 +35,14 @@ class App extends Component {
         }
       ],
       education: [
-
+        {
+          from: '',
+          to: '',
+          location: '',
+          position: '',
+          name: '',
+          tasks: []
+        }
       ],
       achievements: [
 
@@ -145,15 +152,15 @@ class App extends Component {
   handleListEntryChange(e, id, sectionName) {
     
     this.setState(state => {
-      if(state.experience[id])
+      if(state[sectionName][id])
         return {
-          experience: [
-            ...state.experience.slice(0, id),
+          [sectionName]: [
+            ...state[sectionName].slice(0, id),
             {
-              ...state.experience[id],
-              [e.target.id]: e.target.value
+              ...state[sectionName][id],
+              [e.target.name]: e.target.value
             },
-            ...state.experience.slice(id+1)
+            ...state[sectionName].slice(id+1)
           ]
         }
       return;

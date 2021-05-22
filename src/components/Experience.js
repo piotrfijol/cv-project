@@ -47,32 +47,24 @@ function Experience(
             </ListEntry>
         ));
 
-    const handleChange = e => {
-        console.log(e.target.parentNode.parentNode);
-    }
-
-    const handleTaskChange = e => {
-        console.log(e);
-    }
-
     const editView = experience && (
         experience.map((el, index) => (
         <form onSubmit={handleSubmit} data-id={index}> 
             <div className="row">
-                <label htmlFor="position">Position: </label>
-                <input onChange={e => handleInputChange(e, index)} placeholder="Software Developer" type="text" onChange={e => handleInputChange(e, index)} value={el.position} id="position"/>
+                <label htmlFor={`Xposition${index}`}>Position: </label>
+                <input onChange={e => handleInputChange(e, index)} placeholder="Software Developer" type="text" onChange={e => handleInputChange(e, index)} value={el.position} name="position" id={`Xposition${index}`}/>
             </div>
             <div className="row">
-                <label htmlFor="company-name">Company name: </label><input placeholder="DevUX" onChange={e => handleInputChange(e, index)} type="text"  value={el.name}  id="name"/>
+                <label htmlFor={`Xcompany-name${index}`}>Company name: </label><input placeholder="DevUX" onChange={e => handleInputChange(e, index)} type="text"  value={el.name}  name="name"  id={`Xcompany-name${index}`}/>
             </div>
             <div className="row">
-                <label htmlFor="location">Location: </label><input placeholder="New York"  onChange={e => handleInputChange(e, index)} value={el.location} type="text" id="location"/>
+                <label htmlFor={`Xlocation${index}`}>Location: </label><input placeholder="New York"  onChange={e => handleInputChange(e, index)} value={el.location} type="text" name="location" id={`Xlocation${index}`}/>
             </div>
             <div className="row">
-                <label htmlFor="from">From: </label> <input placeholder="03/2013" onChange={e => handleInputChange(e, index)} value={el.from} type="datetime-local" id="from"/>
+                <label htmlFor={`Xfrom${index}`}>From: </label> <input placeholder="03/2013" onChange={e => handleInputChange(e, index)} value={el.from} type="datetime-local" name="from" id={`Xfrom${index}`}/>
             </div>
             <div className="row">
-                <label htmlFor="to">To: </label> <input placeholder="06/2016" value={el.to} onChange={e => handleInputChange(e, index)} type="datetime-local" id="to"/>
+                <label htmlFor={`Xto${index}`}>To: </label> <input placeholder="06/2016" value={el.to} onChange={e => handleInputChange(e, index)} type="datetime-local"  name="to" id={`Xto${index}`}/>
             </div>
             <div className="group">
                 {el.tasks.map((task, id) => {

@@ -39,7 +39,16 @@ function Preview(props) {
                     experience={props.data.experience} 
                     editable={props.editable}
                 />
-                <Education editable={props.editable}/>
+                <Education 
+                    onAddEducation={props.onAddListEntry} 
+                    onEducationChange={props.onListEntryChange} 
+                    onRemoveEducation={props.onRemoveListEntry}
+                    onTaskAdd={props.onItemAdd}
+                    onTaskRemove={props.onItemRemove}
+                    onTaskChange={props.onItemChange}
+                    education={props.data.education} 
+                    editable={props.editable}
+                />
                 <Achievements editable={props.editable}/>
                 <Interests editable={props.editable}/>
             </div>
