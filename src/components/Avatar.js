@@ -12,7 +12,7 @@ function Avatar(props) {
         const reader = new FileReader();
         reader.addEventListener('load', (e) => {
             if(e.target.result.startsWith("data:image/"))
-                document.getElementById("avatar").src = e.target.result; 
+                props.onAvatarChange(e.target.result);
         });
         reader.readAsDataURL(file);
     }

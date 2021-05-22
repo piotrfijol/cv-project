@@ -172,9 +172,21 @@ h2.underline::after {
   font-weight: 600;
 }
 
+.small-padding {
+  padding: 0.2em 0.8em;
+}
+
+.medium-font {
+  font-size: 24px;
+}
+
 .btn:hover {
-  background-color: #5fb857;
+  opacity: 0.9;
   transition-duration: 0.2s;
+}
+
+.warning {
+  background-color: #d4442a;
 }
 
 form label {
@@ -185,6 +197,11 @@ form label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.3em;
+}
+
+.btn-wrapper {
+  width: 60%;
+  text-align: right;
 }
 
 .col {
@@ -212,7 +229,6 @@ h3, p {
 
 textarea {
   width: 95%;
-  height: 150px;
   resize: none;
   padding: 0.5em;
 }
@@ -243,6 +259,23 @@ input[type=file] {
   border-radius: 50%;
   right: 0;
   bottom: 0;
+}
+
+.gap-bottom {
+  margin-bottom: 1em;
+}
+
+.group {
+  padding: 1em 0.8em 1em 0;
+  width: 100%;
+  min-height: 3em;
+  border-radius: 10px;
+  border: 2px solid #BBB;
+  margin: 1em 0;
+}
+
+.item {
+  margin: 1em 0;
 }
 
 /*# sourceMappingURL=style.css.map */
